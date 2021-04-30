@@ -16,4 +16,4 @@
         <Button Name="btnPrimo" Content="Calcola se primo" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="137" Height="26" Click="btnPrimo_Click"/>
         <Label Name="lblPrimo" Content="" HorizontalAlignment="Left" Margin="152,80,0,0" VerticalAlignment="Top" Width="166"/>
     </Grid>
-</Window>
+</Window>  
