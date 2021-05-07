@@ -5,15 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfEsercizioTask"
         mc:Ignorable="d"
-        Title="MainWindow" Height="170" Width="740">
+        Title="MainWindow" Height="100" Width="740">
     <Grid>
         <Label Content="Numero A:" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtA" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="26" Margin="77,23,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70"/>
         <ProgressBar x:Name="ProgressBar" HorizontalAlignment="Left" Height="26" Margin="152,23,0,0" VerticalAlignment="Top" Width="166"/>
         <Label Content="Conteggio multipli di A:" HorizontalAlignment="Left" Margin="323,23,0,0" VerticalAlignment="Top"/>
-        <Label Name="lblMultipli" Content="" FontWeight="Bold" HorizontalAlignment="Left" Margin="459,23,0,0" VerticalAlignment="Top" Width="163"/>
+        <Label Name="lblMultipli" Content="N/D" FontWeight="Bold" HorizontalAlignment="Left" Margin="459,23,0,0" VerticalAlignment="Top" Width="163"/>
         <Button x:Name="bntEsegui" Content="Esegui" FontWeight="Bold" HorizontalAlignment="Left" Margin="637,23,0,0" VerticalAlignment="Top" Width="75" Height="26" Click="bntEsegui_Click"/>
-        <Button Name="btnPrimo" Content="Calcola se primo" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="137" Height="26" Click="btnPrimo_Click"/>
-        <Label Name="lblPrimo" Content="" HorizontalAlignment="Left" Margin="152,80,0,0" VerticalAlignment="Top" Width="166"/>
     </Grid>
 </Window>  

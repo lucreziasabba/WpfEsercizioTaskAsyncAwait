@@ -31,52 +31,29 @@ namespace WpfEsercizioTask
             ProgressBar.Minimum = 0;
             ProgressBar.Maximum = 100;
             ProgressBar.Value = 0;
-            Multipli(a);
+            Task t1 = Task.Factory.StartNew(() => Multipli(a));
         }
 
-        private async Task Multipli(int a)
+        private void Multipli(int a)
         {
-            await Task.Run(() =>
+            int d = 200000000;
+            int m = 0;
+            for (int i = 1; i <= d; i++)
             {
-                int d = 200000000;
-                int m = 0;
-                for (int i = 1; i <= d; i++)
+                if ((i % a) == 0)
                 {
-                    if ((i % a) == 0)
-                    {
-                        m++;
-                    }
-                    if (i % 2000000 == 0)
-                    {
-                        ProgressBar.Dispatcher.Invoke(() =>
-                        ProgressBar.Value++);
-                    };
+                    m++;
                 }
+                if (i % 2000000 == 0)
+                {
+                    ProgressBar.Dispatcher.Invoke(() =>
+                    ProgressBar.Value++);
+                };
+            }
 
-                lblMultipli.Dispatcher.Invoke(() =>
-                    lblMultipli.Content = m
-                );
-            });
-        }
-
-        private void btnPrimo_Click(object sender, RoutedEventArgs e)
-        {
-            lblPrimo.Content = "";
-            bool primo = true;
-            int a = int.Parse(txtA.Text);
-            for (int i = 2; i <= a / 2; i++)
-            {
-                if (a % i == 0)
-                    primo = false;
-            }
-            if (primo == false)
-            {
-                lblPrimo.Content = "Non è primo!";
-            }
-            else
-            {
-                lblPrimo.Content = "E' primo!";
-            }
+            lblMultipli.Dispatcher.Invoke(() =>
+                lblMultipli.Content = m
+            );
         }
     }
 }
